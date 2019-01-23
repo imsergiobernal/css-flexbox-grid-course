@@ -95,3 +95,134 @@ nav ul a {
         flex: 1;
     }
 }
+
+/* Dropdown */
+
+.dropdown ul li ul {
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .dropdown ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dropdown ul li {
+        display: flex;
+        flex: 1 1 100%;
+        position: relative;
+    }
+
+    .dropdown ul li ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%
+    }
+
+
+}
+
+.dropdown ul li ul li:hover {
+    display: flex;
+    background-color: #ff5e62;
+}
+
+/* Fuentes para las redes sociales (siguientes ejercicios) */
+
+.sociales ul li a:before {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.sociales ul li a[href*='facebook.com']::before {
+    content: "\f39e";
+}
+.sociales ul li a[href*='twitter.com']::before {
+    content: "\f099";
+}
+.sociales ul li a[href*='youtube.com']::before {
+    content: "\f167";
+}
+.sociales ul li a[href*='instagram.com']::before {
+    content: "\f16d";
+}
+.sociales ul li a[href*='pinterest.com']::before {
+    content: "\f0d2";
+}
+
+/* Redes sociales */
+
+#rrss ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#rrss ul li a span {
+    display: none;
+}
+
+
+/* Dropdown con redes sociales */
+.nsd {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nsd .menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.nsd .iconos {
+    display: flex;
+    order: -1;
+}
+
+@media screen and (min-width: 768px) {
+    .nsd {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1000px
+    }
+
+    .nsd .menu {
+        flex-direction: row;
+    }
+
+    .nsd .menu li {
+        position: relative;
+    }
+    .nsd .menu li ul {
+        display: none;
+    }
+
+    .nsd .menu li ul li {
+        background-color: #ff5e62;
+    }
+
+    .nsd .iconos {
+        order: unset;
+    }
+
+
+}
+
+.nsd .menu li:hover ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+}
+
+.nsd .iconos li a span {
+    display: none;
+}
