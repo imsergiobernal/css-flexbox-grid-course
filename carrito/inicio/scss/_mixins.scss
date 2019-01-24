@@ -1,0 +1,40 @@
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+/* Botones */
+@mixin boton($color) {
+    background-color: $color;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+}
+
+@mixin background-imagen($imagen) {
+    background-image: url($imagen);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+
+/* Media queries */
+@mixin phone {
+    @media screen and (min-width: #{$phone}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
