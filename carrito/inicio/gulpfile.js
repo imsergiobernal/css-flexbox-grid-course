@@ -11,6 +11,11 @@ gulp.task('sass', () => {
     .pipe(sass({
       includePaths: ['scss']
     }))
+    .on('error', function (err) {
+      console.log(err.toString());
+
+      this.emit('end');
+    })
     .pipe(gulp.dest('css/'));
 });
 
