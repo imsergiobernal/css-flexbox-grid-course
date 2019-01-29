@@ -17,6 +17,7 @@ body {
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
+    width: 90%;
     padding-left: 1.9rem!important;
     padding-right: 1.9rem!important;
     @include tablet() {
@@ -39,6 +40,10 @@ body {
 
 .oculto {
     display: none;
+}
+
+.centrado {
+    text-align: center;
 }
 
 .carrito-compras {
@@ -149,5 +154,87 @@ body {
 
         
     }
+
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .curso {
+        flex: 0 1 calc(50% - 1rem);
+        @include tablet() {
+            flex: 0 1 calc(33% - 1rem);
+        }
+        @include desktop() {
+            flex: 0 1 calc(25% - 1rem);
+        }
+        margin-bottom: 1rem;
+        border: 1px solid #e1e1e1;
+
+        .imagen-curso {
+            width: 100%;
+        }
+        
+        .info-curso {
+            padding: 1rem;
+
+            h4 {
+                margin: 0;
+                font-size: 1.4rem; 
+            }
+
+            .precio {
+                display: flex;
+                justify-content: space-between;
+
+                .regular {
+                    text-decoration: line-through;
+                }
+
+                .oferta {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+            }
+
+            .boton {
+                @include boton($main);
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e1e1;
+
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        @include phone() {
+            flex-direction: row;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            flex: 1;
+            @include desktop() {
+                flex: 0 1 calc(30% - 1rem);
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
 
 }
